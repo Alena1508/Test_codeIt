@@ -1,0 +1,16 @@
+.slider {
+  &__img {
+    width: 100%;
+  }
+  .slick-dots {
+    bottom: 15px;
+  }
+  .slick-dots li button:before {
+    font-size: 70px;
+    opacity: 0.3;
+  }
+  .slick-dots li.slick-active button:before {
+    color: $main-bg;
+    opacity: 1;
+  }
+}

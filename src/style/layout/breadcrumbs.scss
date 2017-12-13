@@ -1,0 +1,45 @@
+.breadcrumbs {
+  margin:40px 0;
+  padding: 0;
+  list-style-type:none;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  @media screen and (max-width: 640px){
+    justify-content:center;
+  }
+  &__item {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 4px;
+      height: 7px;
+      background: url("../img/rightArrow.png") no-repeat;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+      .breadcrumbs__link {
+        color: $text-color;
+      }
+    }
+    &:first-child {
+      .breadcrumbs__link {
+        padding-left: 0;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    color: #282c37;
+    text-decoration: none;
+    padding:0 20px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

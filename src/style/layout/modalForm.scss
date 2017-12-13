@@ -1,0 +1,110 @@
+.modalForm {
+  width: 470px;
+  height: 580px;
+  background: $main-bg;
+  position: fixed;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin-top: -150px;
+  margin-left: auto;
+  margin-right:auto;
+  display: none;
+  opacity: 0;
+  z-index: 105;
+  padding: 30px 25px 25px 65px;
+  box-sizing: border-box;
+  @media screen and (max-width: 640px){
+    width: 80%;
+    padding-left: 25px;
+  }
+  &__close {
+    width: 30px;
+    height: 30px;
+    background: $main-bg url("../img/closeBtn.png") center no-repeat;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer;
+    display: block;
+  }
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #535353;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__label {
+    display: block;
+    color: #535353;
+    margin-bottom: 5px;
+  }
+  &__icon {
+  color: $error-color;
+  }
+  &__field {
+    box-sizing: border-box;
+    width: 100%;
+    padding:12px;
+    position: relative;
+    &.error {
+      font-style: italic;
+      color: $error-color;
+      border: 1px solid #ff8383;
+      box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+    }
+  }
+  &__textarea {
+    width: 100%;
+    resize: none;
+    padding: 12px;
+    height: 141px;
+    box-sizing: border-box;
+    &.error {
+      font-style: italic;
+      color: $error-color;
+      border: 1px solid #ff8383;
+      box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+    }
+  }
+  &__btnWrapper {
+    display: flex;
+    justify-content:flex-end;
+  }
+  &__btn {
+    padding:10px 30px;
+    box-sizing: border-box;
+    border: 1px solid $nav-bg;
+    background: $nav-bg;
+    color: $main-bg;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    &:hover {
+      border: 1px solid $nav-bg;
+      background: $main-bg;
+      color: $nav-bg;
+    }
+  }
+
+}
+
+.overlay {
+  z-index: 100;
+  position: fixed;
+  background: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}

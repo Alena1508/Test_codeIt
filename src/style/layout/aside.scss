@@ -1,0 +1,76 @@
+$total-items: 6;
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 60;
+  width: 250px;
+  background: $nav-bg;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 30px;
+  transform: translatex(250px);
+  transition-duration: 0.4s;
+  @media screen and (max-width: 500px){
+    transform: translatex(150px);
+    padding: 85px 20px 0;
+    width: 150px;
+  }
+  &.--active {
+    transform: translatex(0);
+    .menu__item{
+      animation: fadeIn 0.5s linear;
+      animation-fill-mode: both;
+      @for $i from 1 through $total-items {
+        &:nth-child(#{$i}) {
+          animation-delay: .08s * $i;
+        }
+      }
+    }
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  &__item{
+    margin-bottom: 15px;
+    position: relative;
+  }
+  &__link{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+  }
+  &__closeBtn{
+    position: fixed;
+    right: 30px;
+    text-decoration: none;
+    top: 30px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: url("../img/close.svg") no-repeat;
+  }
+}
+
+// Set delay per List Item
+
+// Keyframe animation
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    left: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

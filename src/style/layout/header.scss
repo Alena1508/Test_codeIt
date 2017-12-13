@@ -1,0 +1,88 @@
+.header {
+  padding:25px 0;
+  background: $header-bg;
+  @media screen and (max-width: 1024px){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+  }
+  .wrapper {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    @media screen and (max-width: 640px){
+      flex-wrap: wrap;
+    }
+  }
+  &__logo {
+    @media screen and (max-width: 640px){
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__contact {
+    display: flex;
+    justify-content:flex-end;
+    @media screen and (max-width: 640px){
+      width: 100%;
+      justify-content:center;
+    }
+  }
+  &__phones {
+    margin-right:22px;
+  }
+  &__link {
+    display: block;
+    font-size:18px;
+    line-height: 22px;
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__feedback {
+    background: $nav-bg;
+    color: $main-bg;
+    text-transform: uppercase;
+    padding:12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid $nav-bg;
+    transition-duration: 0.3s;
+    &:hover {
+      background: $header-bg;
+      color: $text-color;
+      border: 1px solid $nav-bg;
+    }
+  }
+  &__btn {
+    display: none;
+    @media screen and (max-width: 1024px){
+      display: block;
+      width: 60px;
+      height: 50px;
+      margin-left: 22px;
+      background: url("../img/burger.svg") no-repeat;
+    }
+    @media screen and (max-width: 640px){
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+  }
+}
+.spacer {
+  display: none;
+  width: 100%;
+  height: 100px;
+  @media screen and (max-width: 1024px){
+    display: block;
+  }
+  @media screen and (max-width: 640px){
+    height: 159px;
+  }
+}

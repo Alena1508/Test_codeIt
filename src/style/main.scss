@@ -1,0 +1,18 @@
+@import "base/normalize";
+@import "base/variables";
+@import "base/fonts";
+@import "base/main";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+
+@import "layout/header";
+@import "layout/aside";
+@import "layout/navigation";
+@import "layout/slider";
+@import "layout/breadcrumbs";
+@import "layout/content";
+@import "layout/filter";
+@import "layout/catalog";
+@import "layout/product";
+@import "layout/footer";
+@import "layout/modalForm";

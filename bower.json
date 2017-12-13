@@ -1,0 +1,22 @@
+{
+  "name": "easternPeak",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alena"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/libs"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
