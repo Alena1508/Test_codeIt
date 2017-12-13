@@ -19,12 +19,12 @@ $(document).ready(function () {
             function(){
                 $('.modalForm')
                     .css('display', 'block')
-                    .animate({opacity: 1, top: '50%'}, 200);
+                    .animate({opacity: 1, top: '15%'}, 200);
             });
     });
     $('.modalForm__close, .overlay').click( function(){
         $('.modalForm')
-            .animate({opacity: 0, top: '45%'}, 200,
+            .animate({opacity: 0, top: '15%'}, 200,
                 function(){
                     $(this).css('display', 'none');
                     $('.overlay').fadeOut(400);
